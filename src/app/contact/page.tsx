@@ -1,0 +1,240 @@
+import SharedLayout from '../components/SharedLayout';
+import HeroFrame from '../components/HeroFrame';
+import Link from 'next/link';
+
+export default function ContactPage() {
+  return (
+    <SharedLayout>
+      <div className="content">
+        <HeroFrame 
+          title="Contact"
+          subtitle="Request an evaluation to determine if Robot SEO applies to your situation"
+        />
+
+        <div className="section-anchor">
+          <h2>Request an Evaluation</h2>
+          <p>
+            If your service business depends on organic discovery and you want to determine whether Robot SEO applies to your situation, we can evaluate your current technical foundation.
+          </p>
+          <p>
+            This evaluation examines how AI systems currently interpret your website and identifies specific areas where technical improvements may enhance machine understanding.
+          </p>
+        </div>
+
+        <div className="definition-block contact-form-container">
+          <h3>Evaluation Request Form</h3>
+          <form className="contact-form">
+            <div className="form-field">
+              <label htmlFor="contactName">Contact name *</label>
+              <input 
+                type="text" 
+                id="contactName" 
+                name="contactName" 
+                required 
+                placeholder="Your name"
+              />
+            </div>
+
+            <div className="form-field">
+              <label htmlFor="websiteUrl">Website URL *</label>
+              <input 
+                type="url" 
+                id="websiteUrl" 
+                name="websiteUrl" 
+                required 
+                placeholder="https://example.com"
+              />
+            </div>
+
+            <div className="form-field">
+              <label htmlFor="businessType">Primary business type *</label>
+              <input 
+                type="text" 
+                id="businessType" 
+                name="businessType" 
+                required 
+                placeholder="e.g. Legal services, Marketing consultancy, Financial planning"
+              />
+            </div>
+
+            <div className="form-field">
+              <label htmlFor="acquisitionConcern">Primary acquisition concern *</label>
+              <textarea 
+                id="acquisitionConcern" 
+                name="acquisitionConcern" 
+                rows={3}
+                required 
+                placeholder="e.g. organic leads declining, AI assistants recommending competitors"
+              ></textarea>
+            </div>
+
+            <div className="form-field">
+              <label htmlFor="technicalConstraints">Technical constraints (optional)</label>
+              <input 
+                type="text" 
+                id="technicalConstraints" 
+                name="technicalConstraints" 
+                placeholder="e.g. WordPress, Shopify, custom framework"
+              />
+            </div>
+
+            <div className="form-field">
+              <label htmlFor="contactEmail">Contact email *</label>
+              <input 
+                type="email" 
+                id="contactEmail" 
+                name="contactEmail" 
+                required 
+                placeholder="your@email.com"
+              />
+            </div>
+
+            <button type="submit" className="cta-primary">
+              Request an evaluation
+            </button>
+          </form>
+          
+          <p className="mt-6" style={{ color: 'var(--text-secondary)' }}>
+            <strong>Response Timeline:</strong> We respond to evaluation requests within one business day with next steps and scheduling information.
+          </p>
+        </div>
+
+        <div className="section-anchor">
+          <h2>Evaluation Process</h2>
+          
+          <p><strong>Technical Assessment</strong></p>
+          <p>
+            We analyze your website's current structure, content organization, and technical implementation against AI system requirements.
+          </p>
+
+          <p><strong>Compatibility Review</strong></p>
+          <p>
+            We determine whether your business type, market situation, and website characteristics align with Robot SEO applications.
+          </p>
+
+          <p><strong>Implementation Scope</strong></p>
+          <p>
+            If Robot SEO is appropriate for your situation, we outline specific technical recommendations and implementation priorities.
+          </p>
+
+          <p><strong>No-Obligation Analysis</strong></p>
+          <p>
+            The evaluation process involves no commitments or obligations beyond the assessment itself.
+          </p>
+        </div>
+
+        <div className="section-anchor">
+          <h2>Who Should Request an Evaluation</h2>
+          <ul className="list-disc pl-6 mb-5 space-y-2">
+            <li><strong>Service Business Owners</strong> who depend on organic search and online discovery for customer acquisition.</li>
+            <li><strong>Marketing Directors</strong> working with service businesses that want technical precision in their website optimization approach.</li>
+            <li><strong>Businesses Currently Investing in SEO</strong> who want to understand how AI system requirements may affect their optimization strategy.</li>
+            <li><strong>Professional Service Providers</strong> who compete based on expertise and credibility rather than price alone.</li>
+          </ul>
+        </div>
+
+        <div className="section-anchor">
+          <h2>Evaluation Criteria</h2>
+          
+          <p><strong>Business Type Alignment</strong></p>
+          <p>
+            Service businesses with established markets, clear service definitions, and dependence on credibility-based customer decisions.
+          </p>
+
+          <p><strong>Current Website Foundation</strong></p>
+          <p>
+            Existing websites with sufficient content and technical infrastructure to support optimization implementation.
+          </p>
+
+          <p><strong>Market Competition</strong></p>
+          <p>
+            Competitive situations where technical precision and AI system understanding may provide differentiation advantages.
+          </p>
+
+          <p><strong>Resource Availability</strong></p>
+          <p>
+            Businesses with resources to implement and maintain technical improvements over time.
+          </p>
+        </div>
+
+        <div className="section-anchor">
+          <h2>What to Expect</h2>
+          
+          <p><strong>Initial Consultation</strong></p>
+          <p>
+            Brief discussion about your business, current website performance, and technical optimization goals.
+          </p>
+
+          <p><strong>Technical Review</strong></p>
+          <p>
+            Systematic analysis of your website structure, content organization, and AI system compatibility.
+          </p>
+
+          <p><strong>Assessment Results</strong></p>
+          <p>
+            Clear evaluation of whether Robot SEO applications align with your business situation and technical requirements.
+          </p>
+
+          <p><strong>Implementation Options</strong></p>
+          <p>
+            If Robot SEO is appropriate, specific recommendations for technical implementation approaches and priorities.
+          </p>
+        </div>
+
+        <div className="section-anchor">
+          <h2>Alternative Considerations</h2>
+          
+          <p><strong>Traditional SEO Focus</strong></p>
+          <p>
+            If your website primarily needs conventional SEO improvements, we may recommend focusing on traditional optimization approaches first.
+          </p>
+
+          <p><strong>Content Development Priority</strong></p>
+          <p>
+            If your website lacks sufficient content depth, content development may take priority over technical optimization.
+          </p>
+
+          <p><strong>Business Development Focus</strong></p>
+          <p>
+            If your business model does not depend heavily on organic discovery, other business development approaches may be more appropriate.
+          </p>
+        </div>
+
+        <div className="section-anchor">
+          <h2>Geographic Scope</h2>
+          <p>
+            We work with service businesses throughout North America, with remote collaboration for technical implementation.
+          </p>
+        </div>
+
+        <div className="section-anchor">
+          <h2>Evaluation Standards</h2>
+          
+          <p><strong>Honest Assessment</strong></p>
+          <p>
+            If Robot SEO is not appropriate for your situation, we will communicate this clearly rather than attempting to fit inappropriate solutions.
+          </p>
+
+          <p><strong>Technical Focus</strong></p>
+          <p>
+            Evaluation emphasizes technical requirements and systematic implementation rather than promotional promises.
+          </p>
+
+          <p><strong>Business Alignment</strong></p>
+          <p>
+            We assess genuine alignment between Robot SEO applications and your specific business situation rather than pursuing universal applicability.
+          </p>
+
+          <p><strong>Resource Consideration</strong></p>
+          <p>
+            Evaluation includes realistic assessment of implementation resources and maintenance requirements.
+          </p>
+
+          <p>
+            Robot SEO works best for businesses that understand the importance of technical precision and want systematic approaches to website optimization for AI system compatibility.
+          </p>
+        </div>
+      </div>
+    </SharedLayout>
+  );
+}

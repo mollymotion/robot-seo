@@ -1,0 +1,481 @@
+@import "tailwindcss";
+
+:root {
+  --text-primary: #1F2937;
+  --text-secondary: #4B5563;
+  --text-muted: #6b7280;
+  --accent: #374151;
+  --accent-hover: #1F2937;
+  --support-accent: #6366F1;
+  --background-base: #d4dcf7;
+  --background-primary: #FFFFFF;
+  --background-alternate: #FFFFFF;
+  --border: #E5E7EB;
+  --border-light: #F3F4F6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-primary);
+  background: var(--background-base);
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.008em;
+}
+
+/* Enhanced Typography System */
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: 2.5rem 0 1rem 0;
+  line-height: 1.3;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+.section-anchor h2:first-child {
+  margin-top: 0;
+}
+
+.definition-panel h2:first-child {
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.375rem;
+  font-weight: 580;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: 3rem 0 1.5rem 0;
+  line-height: 1.25;
+}
+
+/* Page subtitle */
+h1 + h3 {
+  font-size: 1.375rem;
+  font-weight: 450;
+  color: var(--text-muted);
+  margin: 0 0 4rem 0;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+}
+
+p {
+  margin: 0 0 1.75rem 0;
+  color: var(--text-primary);
+  line-height: 1.65;
+}
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* Lists */
+ul, ol {
+  margin: 0 0 2.25rem 0;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 1rem;
+  line-height: 1.65;
+  color: var(--text-primary);
+}
+
+/* Enhanced Section System */
+.section-anchor {
+  background: var(--background-primary);
+  border: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+}
+
+.section-anchor:first-child {
+  padding-top: 2rem;
+}
+
+/* Definition System - Core positioning statements */
+.definition-block {
+  background: var(--background-primary);
+  border: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+  position: relative;
+}
+
+.definition-block p:first-child {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.definition-block p:last-child {
+  margin-bottom: 0;
+  color: var(--text-secondary);
+}
+
+/* Principle System - Key concepts and frameworks */
+.principle-block {
+  background: var(--background-alternate);
+  border: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.principle-block h2,
+.principle-block h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+/* Process System - Sequential steps */
+.process-section {
+  background: var(--background-primary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.process-section:last-child {
+  margin-bottom: 0;
+}
+
+.process-section h2 {
+  margin-bottom: 2rem;
+  margin-top: 0;
+  color: var(--text-primary);
+}
+
+.process-section h3 {
+  color: var(--text-primary);
+}
+
+/* Primary CTA System */
+.cta-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  transition: all 0.15s ease;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.cta-primary:hover {
+  background: var(--accent-hover);
+  color: white;
+}
+
+.cta-standard {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.cta-standard:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* CTA Section Framing */
+.cta-section {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: var(--background-alternate);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.cta-section p {
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+/* New Component System */
+
+/* Hero Frame - Clearly framed top section */
+.hero-frame {
+  background: var(--background-primary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-content {
+  max-width: 44rem;
+  text-align: left;
+}
+
+.hero-subtitle {
+  font-size: 1.375rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+  font-weight: 450;
+  margin: 1rem 0 2.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.hero-cta {
+  margin-top: 2.5rem;
+}
+
+/* Definition Panel - Signature component for core definitions */
+.definition-panel {
+  background: var(--background-primary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.definition-content {
+  line-height: 1.6;
+}
+
+.definition-content p:first-child {
+  font-size: 1.1875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.definition-content p:last-child {
+  margin-bottom: 0;
+  color: var(--text-secondary);
+}
+
+/* CTA Band - Dedicated section with background contrast */
+.cta-band {
+  background: var(--background-alternate);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.cta-band-content p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  margin: 0 0 2rem 0;
+  font-weight: 450;
+}
+
+/* Document Header - Standards-style header */
+.document-header {
+  background: var(--background-primary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.document-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.document-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.document-labels {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.version-label,
+.status-label {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.version-label {
+  background: var(--background-base);
+  color: var(--text-secondary);
+}
+
+.status-label {
+  background: var(--background-base);
+  color: var(--text-primary);
+}
+
+.scope-statement {
+  color: var(--text-secondary);
+  margin: 0 0 1.5rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.document-actions {
+  padding-top: 1rem;
+  border-top: 1px solid var(--background-base);
+}
+
+/* Standard Blocks - Labeled content sections */
+.standard-block {
+  background: var(--background-primary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+
+.block-label {
+  background: var(--background-base);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.block-content {
+  padding: 1.5rem;
+}
+
+.block-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Numbered sections */
+.numbered-section {
+  background: var(--background-primary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  counter-increment: section;
+}
+
+.numbered-section h2::before {
+  content: counter(section) ". ";
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.content {
+  counter-reset: section;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  max-width: 32rem;
+  margin: 0 auto 2.5rem;
+}
+
+.contact-form-container {
+  padding-top: 0;
+}
+
+.form-field {
+  margin-bottom: 1.5rem;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--background-base);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  transition: border-color 0.15s ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.contact-form .cta-primary {
+  width: 100%;
+  margin-top: 1rem;
+  justify-self: center;
+}
