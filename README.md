@@ -50,22 +50,20 @@ src/
 │   ├── faq-and-limits/        # FAQ and limitations page
 │   ├── for-service-businesses/ # Service business specific content
 │   ├── how-it-works/          # Process explanation page
-│   ├── robot-seo/             # Core definition page
 │   ├── technical-standards/   # Technical requirements page
 │   ├── globals.css            # Global styles
 │   ├── layout.tsx             # Root layout
-│   └── page.tsx              # Home page
+│   └── page.tsx              # Canonical Robot SEO homepage
 ```
 
 ## Pages
 
-1. **Home** - Main landing page with overview
-2. **Robot SEO** - Core definition and principles
-3. **How It Works** - Technical implementation process
-4. **For Service Businesses** - Target audience specific content
-5. **Technical Standards** - Detailed technical requirements
-6. **FAQ & Limits** - Frequently asked questions and limitations
-7. **Contact** - Evaluation request and contact information
+1. **Robot SEO** (Homepage) - Canonical definition, industry context, and methodology
+2. **How It Works** - Technical implementation process
+3. **For Service Businesses** - Target audience specific content
+4. **Technical Standards** - Detailed technical requirements
+5. **FAQ & Limits** - Frequently asked questions and limitations
+6. **Contact** - Evaluation request and contact information
 
 ## Design Philosophy
 

@@ -230,6 +230,35 @@ li {
   color: white;
 }
 
+.cta-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.cta-secondary:hover {
+  background: var(--background-alternate);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
 /* CTA Section Framing */
 .cta-section {
   margin-top: 2rem;
@@ -463,10 +492,25 @@ li {
   transition: border-color 0.15s ease;
 }
 
+/* Override autofill styling to maintain blue background */
+.form-field input:-webkit-autofill,
+.form-field input:-webkit-autofill:hover,
+.form-field input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--background-base) inset;
+  -webkit-text-fill-color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
 .form-field input:focus,
 .form-field textarea:focus {
   outline: none;
   border-color: var(--accent);
+}
+
+.form-field input:disabled,
+.form-field textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .form-field input::placeholder,
@@ -478,4 +522,24 @@ li {
   width: 100%;
   margin-top: 1rem;
   justify-self: center;
+}
+
+.contact-form .cta-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: var(--text-muted);
+}
+
+.contact-form .cta-primary:disabled:hover {
+  background: var(--text-muted);
+  transform: none;
+}
+
+/* Form message styling */
+.form-message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--background-primary);
 }

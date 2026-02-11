@@ -1,8 +1,55 @@
+'use client';
+
 import SharedLayout from '../components/SharedLayout';
 import HeroFrame from '../components/HeroFrame';
-import Link from 'next/link';
+import ObfuscatedEmail from '../components/ObfuscatedEmail';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+  const router = useRouter();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage('');
+
+    const form = e.currentTarget; // Store form reference early
+    const formData = new FormData(form);
+    const data = {
+      contactName: formData.get('contactName'),
+      websiteUrl: formData.get('websiteUrl'),
+      businessType: formData.get('businessType'),
+      acquisitionConcern: formData.get('acquisitionConcern'),
+      technicalConstraints: formData.get('technicalConstraints'),
+      contactEmail: formData.get('contactEmail'),
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      
+      const responseData = await response.json();
+      
+      if (response.ok && responseData.success) {
+        // Redirect to success page
+        router.push('/contact/success');
+      } else {
+        setSubmitMessage('There was an error sending your request. Please try again or use the email address below.');
+      }
+    } catch (error) {
+      setSubmitMessage('There was an error sending your request. Please try again or use the email address below.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <SharedLayout>
       <div className="content">
@@ -23,7 +70,7 @@ export default function ContactPage() {
 
         <div className="definition-block contact-form-container">
           <h3>Evaluation Request Form</h3>
-          <form className="contact-form">
+          <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-field">
               <label htmlFor="contactName">Contact name *</label>
               <input 
@@ -32,6 +79,7 @@ export default function ContactPage() {
                 name="contactName" 
                 required 
                 placeholder="Your name"
+                disabled={isSubmitting}
               />
             </div>
 
@@ -43,6 +91,7 @@ export default function ContactPage() {
                 name="websiteUrl" 
                 required 
                 placeholder="https://example.com"
+                disabled={isSubmitting}
               />
             </div>
 
@@ -54,6 +103,7 @@ export default function ContactPage() {
                 name="businessType" 
                 required 
                 placeholder="e.g. Legal services, Marketing consultancy, Financial planning"
+                disabled={isSubmitting}
               />
             </div>
 
@@ -65,6 +115,7 @@ export default function ContactPage() {
                 rows={3}
                 required 
                 placeholder="e.g. organic leads declining, AI assistants recommending competitors"
+                disabled={isSubmitting}
               ></textarea>
             </div>
 
@@ -75,6 +126,7 @@ export default function ContactPage() {
                 id="technicalConstraints" 
                 name="technicalConstraints" 
                 placeholder="e.g. WordPress, Shopify, custom framework"
+                disabled={isSubmitting}
               />
             </div>
 
@@ -86,13 +138,24 @@ export default function ContactPage() {
                 name="contactEmail" 
                 required 
                 placeholder="your@email.com"
+                disabled={isSubmitting}
               />
             </div>
 
-            <button type="submit" className="cta-primary">
-              Request an evaluation
+            <button type="submit" className="cta-primary" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : 'Request an evaluation'}
             </button>
           </form>
+
+          {submitMessage && (
+            <div className="form-message">
+              <p style={{ color: 'var(--text-primary)', margin: 0 }}>{submitMessage}</p>
+            </div>
+          )}
+          
+          <p className="mt-4" style={{ color: 'var(--text-secondary)' }}>
+            If you prefer email - <ObfuscatedEmail />
+          </p>
           
           <p className="mt-6" style={{ color: 'var(--text-secondary)' }}>
             <strong>Response Timeline:</strong> We respond to evaluation requests within one business day with next steps and scheduling information.
