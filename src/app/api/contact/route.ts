@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend only when API key is available
+const getResendClient = () => {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error('RESEND_API_KEY environment variable is not configured');
+  }
+  return new Resend(apiKey);
+};
 
 export async function POST(request: NextRequest) {
   try {
@@ -31,6 +38,7 @@ Submitted on: ${new Date().toISOString()}
     `;
 
     // Send email using Resend - no DNS setup needed
+    const resend = getResendClient();
     const result = await resend.emails.send({
       from: 'Robot SEO Contact Form <onboarding@resend.dev>', // Verified domain, no DNS needed
       to: 'evaluation@robot-seo.com', // New account verified email
