@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NODE_ENV === 'production' 
-    ? 'https://your-domain.com' // Replace with your actual domain
+    ? 'https://www.robot-seo.com'
     : 'http://localhost:3000'
 
   return [
