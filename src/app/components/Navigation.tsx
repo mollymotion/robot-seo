@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
@@ -37,6 +38,14 @@ export default function Navigation() {
     >
       <div className="flex items-center justify-between">
         <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
+          <Link href="/">
+            <Image
+              src="/images/R-seo-icon.png"
+              alt="Robot SEO Icon"
+              width={32}
+              height={32}
+            />
+          </Link>
           {navItems.map((item, index) => (
             <div key={index} className="relative">
               {item.dropdown ? (
@@ -91,8 +100,12 @@ export default function Navigation() {
                       : ''
                   } ${
                     item.href === '/' 
-                      ? 'text-2xl font-semibold mr-5' 
+                      ? 'text-2xl font-semibold -ml-4' 
                       : 'text-lg font-medium'
+                  } ${
+                    item.href === '/how-it-works'
+                      ? '-ml-1'
+                      : ''
                   } tracking-tight leading-relaxed`}
                   style={{ color: '#000000' }}
                   aria-current={pathname === item.href ? 'page' : undefined}
