@@ -273,25 +273,33 @@ export default function ContactPage() {
         <div className="section-anchor">
           <h2>Evaluation Standards</h2>
           
-          <p><strong>Honest Assessment</strong></p>
-          <p>
-            If Robot SEO is not appropriate for your situation, we will communicate this clearly rather than attempting to fit inappropriate solutions.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Honest Assessment</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              If Robot SEO is not appropriate for your situation, we will communicate this clearly rather than attempting to fit inappropriate solutions.
+            </p>
+          </div>
 
-          <p><strong>Technical Focus</strong></p>
-          <p>
-            Evaluation emphasizes technical requirements and systematic implementation rather than promotional promises.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Technical Focus</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              Evaluation emphasizes technical requirements and systematic implementation rather than promotional promises.
+            </p>
+          </div>
 
-          <p><strong>Business Alignment</strong></p>
-          <p>
-            We assess genuine alignment between Robot SEO applications and your specific business situation rather than pursuing universal applicability.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Business Alignment</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              We assess genuine alignment between Robot SEO applications and your specific business situation rather than pursuing universal applicability.
+            </p>
+          </div>
 
-          <p><strong>Resource Consideration</strong></p>
-          <p>
-            Evaluation includes realistic assessment of implementation resources and maintenance requirements.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Resource Consideration</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              Evaluation includes realistic assessment of implementation resources and maintenance requirements.
+            </p>
+          </div>
 
           <p>
             Robot SEO works best for businesses that understand the importance of technical precision and want systematic approaches to website optimization for AI system compatibility.
