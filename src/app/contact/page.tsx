@@ -165,25 +165,33 @@ export default function ContactPage() {
         <div className="section-anchor">
           <h2>Evaluation Process</h2>
           
-          <p><strong>Technical Assessment</strong></p>
-          <p>
-            We analyze your website's current structure, content organization, and technical implementation against AI system requirements.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Technical Assessment</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              We analyze your website's current structure, content organization, and technical implementation against AI system requirements.
+            </p>
+          </div>
 
-          <p><strong>Compatibility Review</strong></p>
-          <p>
-            We determine whether your business type, market situation, and website characteristics align with Robot SEO applications.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Compatibility Review</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              We determine whether your business type, market situation, and website characteristics align with Robot SEO applications.
+            </p>
+          </div>
 
-          <p><strong>Implementation Scope</strong></p>
-          <p>
-            If Robot SEO is appropriate for your situation, we outline specific technical recommendations and implementation priorities.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Implementation Scope</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              If Robot SEO is appropriate for your situation, we outline specific technical recommendations and implementation priorities.
+            </p>
+          </div>
 
-          <p><strong>No-Obligation Analysis</strong></p>
-          <p>
-            The evaluation process involves no commitments or obligations beyond the assessment itself.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>No-Obligation Analysis</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              The evaluation process involves no commitments or obligations beyond the assessment itself.
+            </p>
+          </div>
         </div>
 
         <div className="section-anchor">
@@ -199,68 +207,90 @@ export default function ContactPage() {
         <div className="section-anchor">
           <h2>Evaluation Criteria</h2>
           
-          <p><strong>Business Type Alignment</strong></p>
-          <p>
-            Service businesses with established markets, clear service definitions, and dependence on credibility-based customer decisions.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Business Type Alignment</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              Service businesses with established markets, clear service definitions, and dependence on credibility-based customer decisions.
+            </p>
+          </div>
 
-          <p><strong>Current Website Foundation</strong></p>
-          <p>
-            Existing websites with sufficient content and technical infrastructure to support optimization implementation.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Current Website Foundation</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              Existing websites with sufficient content and technical infrastructure to support optimization implementation.
+            </p>
+          </div>
 
-          <p><strong>Market Competition</strong></p>
-          <p>
-            Competitive situations where technical precision and AI system understanding may provide differentiation advantages.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Market Competition</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              Competitive situations where technical precision and AI system understanding may provide differentiation advantages.
+            </p>
+          </div>
 
-          <p><strong>Resource Availability</strong></p>
-          <p>
-            Businesses with resources to implement and maintain technical improvements over time.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Resource Availability</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              Businesses with resources to implement and maintain technical improvements over time.
+            </p>
+          </div>
         </div>
 
         <div className="section-anchor">
           <h2>What to Expect</h2>
           
-          <p><strong>Initial Consultation</strong></p>
-          <p>
-            Brief discussion about your business, current website performance, and technical optimization goals.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Initial Consultation</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              Brief discussion about your business, current website performance, and technical optimization goals.
+            </p>
+          </div>
 
-          <p><strong>Technical Review</strong></p>
-          <p>
-            Systematic analysis of your website structure, content organization, and AI system compatibility.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Technical Review</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              Systematic analysis of your website structure, content organization, and AI system compatibility.
+            </p>
+          </div>
 
-          <p><strong>Assessment Results</strong></p>
-          <p>
-            Clear evaluation of whether Robot SEO applications align with your business situation and technical requirements.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Assessment Results</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              Clear evaluation of whether Robot SEO applications align with your business situation and technical requirements.
+            </p>
+          </div>
 
-          <p><strong>Implementation Options</strong></p>
-          <p>
-            If Robot SEO is appropriate, specific recommendations for technical implementation approaches and priorities.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Implementation Options</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              If Robot SEO is appropriate, specific recommendations for technical implementation approaches and priorities.
+            </p>
+          </div>
         </div>
 
         <div className="section-anchor">
           <h2>Alternative Considerations</h2>
           
-          <p><strong>Traditional SEO Focus</strong></p>
-          <p>
-            If your website primarily needs conventional SEO improvements, we may recommend focusing on traditional optimization approaches first.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Traditional SEO Focus</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              If your website primarily needs conventional SEO improvements, we may recommend focusing on traditional optimization approaches first.
+            </p>
+          </div>
 
-          <p><strong>Content Development Priority</strong></p>
-          <p>
-            If your website lacks sufficient content depth, content development may take priority over technical optimization.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Content Development Priority</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              If your website lacks sufficient content depth, content development may take priority over technical optimization.
+            </p>
+          </div>
 
-          <p><strong>Business Development Focus</strong></p>
-          <p>
-            If your business model does not depend heavily on organic discovery, other business development approaches may be more appropriate.
-          </p>
+          <div className="mb-8">
+            <p style={{ marginBottom: '0.25rem' }}><strong>Business Development Focus</strong></p>
+            <p style={{ marginBottom: 0 }}>
+              If your business model does not depend heavily on organic discovery, other business development approaches may be more appropriate.
+            </p>
+          </div>
         </div>
 
         <div className="section-anchor">
