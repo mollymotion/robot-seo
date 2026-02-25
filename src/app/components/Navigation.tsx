@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const navItems = [
   { href: '/', label: 'Robot SEO' },
@@ -24,6 +24,17 @@ const navItems = [
 export default function Navigation() {
   const pathname = usePathname();
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const nav = navRef.current;
+    if (!nav) return;
+    const observer = new ResizeObserver(() => {
+      document.documentElement.style.setProperty('--nav-height', `${nav.offsetHeight}px`);
+    });
+    observer.observe(nav);
+    return () => observer.disconnect();
+  }, []);
 
   const isDropdownItemActive = (dropdown: any[]) => {
     return dropdown.some(item => pathname === item.href);
@@ -31,6 +42,7 @@ export default function Navigation() {
 
   return (
     <nav 
+      ref={navRef}
       role="navigation" 
       aria-label="Main navigation"
       className="fixed inset-x-0 top-0 z-50 pb-8 border-b w-full"

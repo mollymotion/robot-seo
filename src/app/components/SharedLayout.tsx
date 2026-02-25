@@ -4,7 +4,7 @@ export default function SharedLayout({ children }: { children: React.ReactNode }
   return (
     <div className="min-h-screen">
       <Navigation />
-      <div className="max-w-4xl mx-auto px-8 pb-16 pt-32">
+      <div className="max-w-4xl mx-auto px-8 pb-16" style={{ paddingTop: 'calc(var(--nav-height, 8rem) + 25px)' }}>
         <main role="main">
           {children}
         </main>
