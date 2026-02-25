@@ -33,14 +33,16 @@ export default function Navigation() {
     <nav 
       role="navigation" 
       aria-label="Main navigation"
-      className="sticky top-0 z-50 mb-16 pb-8 border-b"
+      className="fixed inset-x-0 top-0 z-50 pb-8 border-b w-full"
       style={{ 
         borderColor: '#000000', 
         backgroundColor: '#d4dcf7',
-        paddingTop: 'max(2rem, env(safe-area-inset-top))'
+        paddingTop: 'max(2rem, env(safe-area-inset-top))',
+        paddingLeft: 'env(safe-area-inset-left)',
+        paddingRight: 'env(safe-area-inset-right)'
       }}
     >
-      <div className="flex items-center justify-between">
+      <div className="max-w-4xl mx-auto px-8 flex items-center justify-between">
         <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
           <Link href="/">
             <Image

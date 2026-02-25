@@ -3,8 +3,8 @@ import Navigation from './Navigation';
 export default function SharedLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen">
-      <div className="max-w-4xl mx-auto px-8 pb-16">
-        <Navigation />
+      <Navigation />
+      <div className="max-w-4xl mx-auto px-8 pb-16 pt-32">
         <main role="main">
           {children}
         </main>
