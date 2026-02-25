@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Robot SEO",
   description: "Making websites maximally legible to AI systems while maintaining traditional SEO excellence",
   keywords: "Robot SEO, AI optimization, technical SEO, service businesses, AI systems",
+  viewport: "width=device-width, initial-scale=1, viewport-fit=cover",
   icons: {
     icon: [
       { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },

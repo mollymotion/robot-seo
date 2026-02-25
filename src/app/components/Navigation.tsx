@@ -34,7 +34,11 @@ export default function Navigation() {
       role="navigation" 
       aria-label="Main navigation"
       className="sticky top-0 z-50 pt-8 mb-16 pb-8 border-b"
-      style={{ borderColor: '#000000', backgroundColor: '#d4dcf7' }}
+      style={{ 
+        borderColor: '#000000', 
+        backgroundColor: '#d4dcf7',
+        paddingTop: 'max(2rem, env(safe-area-inset-top))'
+      }}
     >
       <div className="flex items-center justify-between">
         <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
