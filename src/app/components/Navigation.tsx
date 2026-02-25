@@ -33,7 +33,7 @@ export default function Navigation() {
     <nav 
       role="navigation" 
       aria-label="Main navigation"
-      className="sticky top-0 z-50 pt-8 mb-16 pb-8 border-b"
+      className="sticky top-0 z-50 mb-16 pb-8 border-b"
       style={{ 
         borderColor: '#000000', 
         backgroundColor: '#d4dcf7',
